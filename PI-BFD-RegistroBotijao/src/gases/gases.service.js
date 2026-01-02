@@ -13,7 +13,8 @@ function criarGas(data, callback) {
 
 function atualizarPercentual(id, percentual, callback) {
     const status = calcularStatus(percentual);
-    repository.updatePercentual(Number(id), percentual, status, callback);
+    repository.updatePercentual(id, percentual, status, callback);
+    // repository.updatePercentual(Number(id), percentual, status, callback);
 }
 
 module.exports = { criarGas, atualizarPercentual };

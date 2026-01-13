@@ -15,7 +15,7 @@ module.exports = { processarLeitura };
 
 
 // ==========================
-// 🔌 FUTURO – IOT COM PESO REAL (ESP32)
+//  FUTURO – IOT COM PESO REAL (ESP32)
 // ==========================
 
 // const { calcularPercentualPorPeso, calcularStatus } = require('../utils/gasStatus');

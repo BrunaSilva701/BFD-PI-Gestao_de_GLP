@@ -11,6 +11,7 @@ router.use(require('./botijoes.routes'));
 router.use(require('./iot.routes'));
 router.use(require('./userAuthRoutes'));
 router.use(require('./clienteRoutes'));
+router.use(require('./user.routes'));
 //router.use(require('./companyRoutes')); Manter companyRoutes seria duplicação de dominio, uma vez que admin já existe
 
 module.exports = router;

@@ -33,4 +33,6 @@ module.exports = (sequelize, DataTypes) => {
   sequelize,
   modelName: 'LeituraGas',
   });
+
+  return LeituraGas;
 };

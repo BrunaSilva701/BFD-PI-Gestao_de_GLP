@@ -21,19 +21,19 @@ function atualizarPercentual(id, dados) {
 }
 
 // RETIRAR FUNCTION
-function buscarPorSerial(serialIoT) {
-  return UserGas.findOne({ where: { serialIoT } });
-}
+// function buscarPorSerial(serialIoT) {
+//   return UserGas.findOne({ where: { serialIoT } });
+// }
 
 //ATUALIZAÇÃO COM O ESP32
-// const { UserGas, Botijao } = require('../models');
+const { UserGas, Botijao } = require('../models');
 
-// function buscarPorSerial(serialIoT) {
-//   return UserGas.findOne({
-//     where: { serialIoT },
-//     include: [{ model: Botijao }]
-//   });
-// }
+function buscarPorSerial(serialIoT) {
+  return UserGas.findOne({
+    where: { serialIoT },
+    include: [{ model: Botijao }]
+  });
+}
 
 
 module.exports = {

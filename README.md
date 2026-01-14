@@ -1,2 +1,2 @@
-# BFD-PI-Gestão_de_GLP
+# BFD-API-Gestão_de_GLP
 Desenvolvimento de app para gestão de gás de cozinha para conclusão do projeto integrador do programa Bolsa Futuro Digital. 

@@ -1,6 +1,6 @@
 // VIsualização de perfil
 
-const { User } = require('../models');
+const { User } = require('../../models');
 
 class UserController {
   // GET /users/profile

@@ -1,4 +1,4 @@
-const { UserGas } = require('../../models');
+//const { UserGas } = require('../../models');
 
 function criar(dados) {
   return UserGas.create(dados);
@@ -26,7 +26,7 @@ function atualizarPercentual(id, dados) {
 // }
 
 //ATUALIZAÇÃO COM O ESP32
-const { UserGas, Botijao } = require('../models');
+const { UserGas, Botijao } = require('../../models');
 
 function buscarPorSerial(serialIoT) {
   return UserGas.findOne({

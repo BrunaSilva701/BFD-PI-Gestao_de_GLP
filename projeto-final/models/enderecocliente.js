@@ -10,8 +10,17 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-    }
+      EnderecoCliente.belongsTo(models.Cliente, {
+        foreignKey: "clienteId",
+        as: "cliente"
+      });
+
+      EnderecoCliente.hasMany(models.UserGas, {
+        foreignKey: "addressId",
+        as: "userGases"
+      });
+      }
+
   }
   EnderecoCliente.init({
     rua: DataTypes.STRING,

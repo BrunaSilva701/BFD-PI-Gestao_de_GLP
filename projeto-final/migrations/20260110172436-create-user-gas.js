@@ -10,10 +10,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       botijaoId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       addressId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "EnderecoCliente",
+          key: "id"
+        },
       },
       serialIoT: {
         type: Sequelize.STRING

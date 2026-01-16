@@ -15,10 +15,12 @@ async function listarPorEndereco(req, res) {
   const {addressId} = req.params;
   const gasEndereco = await Gas.findAll({
     where: {addressId}, include: [
-      {
-        model: Cliente, as: 'cliente', attributes: ['nome', 'email']
-      },
-      { model: EnderecoCliente, as: 'enderecoCliente', attributes: ['rua', 'cidade', 'estado', 'cep']
+      { model: EnderecoCliente, as: 'enderecoCliente', attributes: ['rua','numero', 'cidade', 'estado'],
+        include: [
+          {
+            model: Cliente, as: "clientes", attributes: ['nome', 'email']
+          }
+        ]
       }
     ]
   });

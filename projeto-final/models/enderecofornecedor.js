@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       EnderecoFornecedor.belongsTo(models.Admin, {
         foreignKey: "fornecedorId",
-        as: "enderecosAdmin"
+        as: "Admins"
       });
     }
   }

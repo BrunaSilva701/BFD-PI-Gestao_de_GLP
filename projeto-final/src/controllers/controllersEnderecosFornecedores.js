@@ -1,13 +1,13 @@
 const { where } = require("sequelize");
-const {EnderecoFornecedor, Fornecedor} = require("../../models");
+const {EnderecoFornecedor, Admin} = require("../../models");
 
 async function CriarEnderecoF(req,res) {
     try{
         const { fornecedorId } = req.params;
         const {rua, numero, cidade, bairro, estado} = req.body;
 
-        const fornecedor = await Fornecedor.findByPk(fornecedorId);
-        if(!fornecedor){
+        const admin = await Admin.findByPk(fornecedorId);
+        if(!admin){
             return res.status(404).json({erro: "Fornecedor não encontrado"});
         }
         const endereco = await EnderecoFornecedor.create({
@@ -28,8 +28,8 @@ async function ListarEnderecosF(req,res) {
     try{
         const enderecos = await EnderecoFornecedor.findAll({
             include: {
-                model: Fornecedor,
-                as: "fornecedor"
+                model: Admin,
+                as: "Admins"
             }
         });
 

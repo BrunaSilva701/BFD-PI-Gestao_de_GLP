@@ -1,5 +1,5 @@
-require('dotenv').config(); // Carrega o .env
-// console.log('JWT:', process.env.JWT_SECRET);
+require('dotenv').config(); 
+
 
 const express = require('express');
 const app = express();
